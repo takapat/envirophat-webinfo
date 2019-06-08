@@ -5,6 +5,7 @@ import envirophat
 import os
 
 HTTP_PORT = int(os.environ.get('HTTP_PORT', '5000'))
+HOST = os.environ.get("HOST")
 
 app = Flask(__name__)
 
@@ -51,4 +52,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.11.7', port=HTTP_PORT, threaded=True)
+    app.run(host=HOST, port=HTTP_PORT, threaded=True)
